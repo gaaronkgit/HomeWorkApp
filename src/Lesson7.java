@@ -17,7 +17,7 @@ public class Lesson7
 
         for (int i = 0; i < cats.length; i++)
         {
-            cats[i].eat(plate);
+            cats[i].checkFood(plate);
             plate.getInfo();
         }
     }

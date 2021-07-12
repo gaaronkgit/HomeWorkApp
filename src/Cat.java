@@ -14,7 +14,19 @@ public class Cat
         return appetite;
     }
 
-    public void eat(Plate p)
+    void checkFood(Plate p)
+    {
+        if(p.food >= appetite)
+        {
+            eat(p);
+        }
+        else
+        {
+            System.out.println("Еды в тарелке слишком мало! Котик " + name + " не смог покушать");
+        }
+    }
+
+    void eat(Plate p)
     {
         if(p.checkFood(appetite))
         {
