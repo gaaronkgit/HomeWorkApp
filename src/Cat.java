@@ -1,25 +1,41 @@
-public class Cat extends  Animal
+public class Cat
 {
-    Cat(String name)
+    String name;
+    int appetite;
+
+    Cat(String name, int appetite)
     {
-        super(name);
+        this.name = name;
+        this.appetite = appetite;
     }
 
-    void run(int distance)
+    public int getAppetite()
     {
-        if(distance <= 200)
+        return appetite;
+    }
+
+    void checkFood(Plate p)
+    {
+        if(p.food >= appetite)
         {
-            System.out.println(name + " Бежит " + distance + "м");
+            eat(p);
         }
         else
         {
-            System.out.println(name + " не может бежать " + distance + "м");
+            System.out.println("Еды в тарелке слишком мало! Котик " + name + " не смог покушать");
         }
     }
 
-    @Override
-    void swim(int distance)
+    void eat(Plate p)
     {
-        System.out.println("Коты не умеют плавать!!!");
+        if(p.checkFood(appetite))
+        {
+            p.eatFood(appetite);
+            System.out.println("Котик " + name + " покушал досыта! :-)");
+        }
+        else
+        {
+            System.out.println("Котик " + name + " остался голодным! :-(");
+        }
     }
 }
