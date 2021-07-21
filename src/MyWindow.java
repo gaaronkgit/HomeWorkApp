@@ -19,6 +19,7 @@ public class MyWindow extends JFrame
         ActionListener listener = new CloseActionListener();
         btn.addActionListener(listener);
 
+
         JButton btn1 = new JButton("Btn");
 
         panel.add(btn);
