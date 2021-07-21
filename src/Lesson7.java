@@ -1,7 +1,11 @@
+import java.util.Locale;
+
 public class Lesson7
 {
     public static void main(String []args)
     {
+        String s = "Java";
+        System.out.println(s.toUpperCase());
         Plate plate = new Plate(0);
         plate.addFood(100);
         plate.getInfo();
