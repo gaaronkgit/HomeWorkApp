@@ -1,6 +1,7 @@
-import javax.swing.*;
-
-public class Lesson8 extends JFrame
+public class Lesson8
 {
-
+    public static void main(String[] args)
+    {
+        new MyWindow();
+    }
 }
